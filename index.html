@@ -1,0 +1,118 @@
+<!--
+ Copyright 2016 Google Inc.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CounterString</title>
+  <link rel="stylesheet" type="text/css" href="styles/inline.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/icons/testr_launcher_48.png">
+
+  <link rel="manifest" href="/manifest.json">
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="CounterString">
+  <link rel="apple-touch-icon" href="images/icons/testr_launcher_192.png">
+  <meta name="msapplication-TileImage" content="images/icons/testr_launcher_144.png">
+  <meta name="msapplication-TileColor" content="#cedced">
+
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="header__title">CounterString</h1>
+    <button id="butInfo" class="headerButton" aria-label="Info"></button>
+    <button id="butHelp" class="headerButton" aria-label="Help"></button>
+    <button id="butAdd" class="headerButton" aria-label="Add"></button>
+  </header>
+
+
+  <main class="main">
+    <div class="card cardTemplate counterstring" hidden>
+      <div class="description">
+        Length: <span class="length"></span>
+        Divider: <span class="divider"></span>
+      </div>
+      <div class="cstring"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="dialog-info">
+    <div class="dialog">
+      <div class="dialog-title"></div>
+      <div class="dialog-body">
+        <div class="version">Version 0.0.1</div>
+        <div class="info">github link comming soon (TM)</div>
+      </div>
+
+      <div class="dialog-buttons">
+        <button id="butInfoOk" class="button">OK</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="dialog-help">
+    <div class="dialog">
+      <div class="dialog-title"></div>
+      <div class="dialog-body">
+        <div class="credd">Counterstring is from James Bach</div>
+        <div class="how">Pick a length and a divider, the number before the divider denotes the position of the divider</div>
+        <div class="when">Comming soon: Cache of your last strings, Delete counterstring</div>
+      </div>
+
+      <div class="dialog-buttons">
+        <button id="butHelpOk" class="button">OK</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="dialog-container">
+    <div class="dialog">
+      <div class="dialog-title">Add new counterstring</div>
+      <div class="dialog-body">
+        <div class="length">
+          <input id="inputLength" type="number">length</input>
+        </div>
+        <div class="divider">
+          <input id="inputDivider">divider</input>
+        </div>
+      </div>
+
+      <div class="dialog-buttons">
+        <button id="butAddString" class="button">Add</button>
+        <button id="butAddCancel" class="button">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!--<div class="loader">
+    <svg viewBox="0 0 32 32" width="32" height="32">
+      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+    </svg>
+  </div>-->
+
+  <script src="scripts/counterstring.js" async></script>
+
+</body>
+</html>
