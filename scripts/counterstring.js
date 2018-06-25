@@ -1,3 +1,19 @@
+/*
+Copyright 2018 Sebastian Lindholm
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+*/
+
 (function() {
   'use strict';
 
@@ -48,8 +64,6 @@
     }
 
     app.getCounterString(key, data);
-    //app.selectedStrings.push({key: key, label: label});
-    //app.saveSelectedStrings();
     app.updateCounterStrings(key, data);
     app.hideDialog();
 
@@ -126,7 +140,6 @@
       card = app.cardTemplate.cloneNode(true);
       card.classList.remove('cardTemplate');
       card.querySelector('.cstring').textContent = cstring;
-      //card.querySelector('.description').textContent = length+divider;
       card.querySelector('.description .length').textContent = length;
       card.querySelector('.description .divider').textContent = divider;
       card.removeAttribute('hidden');
@@ -169,9 +182,6 @@
        position = targetLength-length;
        number = position.toString();
        numberPosition = number.length;
-       //console.log("positionw " + position);
-       //console.log("numberw " + number);
-       //console.log("numberPositionw " + numberPosition);
 
        cstring = cstring + app.reverseString(divider);
        if (cstring.length < targetLength) {
@@ -180,13 +190,8 @@
        }
 
        length++;
-       //console.log("endw length " + length);
-       //console.log("endw cstring: " + cstring);
-       //console.log("\n\n");
      }
 
-
-     //console.log("end cstring: " + cstring);
      var finalString = app.reverseString(cstring)
      if(finalString.length > targetLength){
        finalString = finalString.substring(finalString.length - targetLength);
